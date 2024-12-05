@@ -11,7 +11,7 @@ loaded_model = pickle.load(open('Student_Grades_Prediction.pkl', 'rb'))
 load_scaler = pickle.load(open('Standard_Scalar.pkl', 'rb'))
 
 # Memuat dataset
-df = pd.read_csv('student-por.csv', sep=";")  # Sesuaikan nama file dataset Anda
+df = pd.read_csv('student-por.csv', sep=";", usecols=['G1', 'G2', 'G3', 'absences', 'activities', 'paid', 'failures', 'studytime'])  # Sesuaikan nama file dataset Anda
 
 # Fungsi untuk prediksi
 def student_prediction(input_data):
